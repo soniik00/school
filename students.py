@@ -26,6 +26,5 @@ for i in range(len(students)):
     students[j+1] = t
 
 
-
 for i in range(3):
     print(i+1, 'место:', students[i].fio)
