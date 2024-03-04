@@ -17,14 +17,21 @@ for i in range(501):
     students[i].score = s[4]
 
 
+students10 = []
+
 for i in range(len(students)):
-    t = students[i]
+    if students[i].clas[:-1] == '10':
+        students10.append(students[i])
+
+for i in range(len(students10)):
+    t = students10[i]
     j = i - 1
-    while j >= 0 and t.score < students[j].score:
-        students[j+1] = students[j]
+    while j >= 0 and t.score > students10[j].score:
+        students10[j+1] = students10[j]
         j -= 1
-    students[j+1] = t
+    students10[j+1] = t
 
-
+print('10 класс:')
 for i in range(3):
-    print(i+1, 'место:', students[i].fio)
+    print(i+1, 'место:', students10[i].fio)
+
