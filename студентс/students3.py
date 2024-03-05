@@ -12,7 +12,7 @@ for i in range(501):
     students.append(Student())
     s = f.readline().split(',')
     if s[4] == None:
-        s[4] = -10
+        s[4] = 0
     students[i].fio = s[1]
     students[i].clas = s[3]
     students[i].score = s[4]
